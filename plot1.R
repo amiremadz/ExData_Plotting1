@@ -17,6 +17,8 @@ str(epcdata)
 head(epcdata)
 
 
+png("plot1.png", height = 480, width = 480)
+
 hist(epcdata$Global_active_power, ylim = c(0,1200),
      main = "Global Active Power",col="red", 
      xlab = "Global Active Power (kilowatts)", ylab = "Frequency",
@@ -24,3 +26,4 @@ hist(epcdata$Global_active_power, ylim = c(0,1200),
 
 #rug(epcdata$Global_active_power)
 
+dev.off()

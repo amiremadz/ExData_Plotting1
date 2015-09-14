@@ -19,6 +19,8 @@ head(epcdata)
 z <- strptime(paste(epcdata$Date,epcdata$Time), format = "%Y-%m-%d %H:%M:%S")
 
 
+png("plot3.png")
+
 
 par(mfrow = c(2,2), mar = c(4,4,2,1))
 
@@ -40,6 +42,7 @@ with(epcdata,{
 })
 
 
+dev.off()
 
 
 
